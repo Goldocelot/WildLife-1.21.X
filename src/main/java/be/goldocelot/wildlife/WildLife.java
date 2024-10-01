@@ -1,5 +1,6 @@
 package be.goldocelot.wildlife;
 
+import be.goldocelot.wildlife.registeries.ModEntities;
 import be.goldocelot.wildlife.registeries.ModItems;
 import be.goldocelot.wildlife.utils.CreativeTabFiller;
 import org.slf4j.Logger;
@@ -48,6 +49,7 @@ public class WildLife
 
         NeoForge.EVENT_BUS.register(this);
 
+        ModEntities.register(modEventBus);
         ModItems.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
